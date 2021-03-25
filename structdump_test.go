@@ -22,3 +22,18 @@ func ExampleStructDump_Dump() {
 	// SimpleType.AnString string
 	// SimpleType.AnStringSlice[] string
 }
+
+func ExampleDump() {
+	type SimpleType struct {
+		AnInt         int
+		AnString      string
+		AnStringSlice []string
+	}
+
+	structdump.Dump(reflect.TypeOf(SimpleType{}))
+
+	// Output:
+	// SimpleType.AnInt int
+	// SimpleType.AnString string
+	// SimpleType.AnStringSlice[] string
+}
